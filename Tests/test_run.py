@@ -1,4 +1,6 @@
+"""Файл отвечающий за тест кейсы."""
 import allure
+
 from Helpers.customers_handler import CustomerHandler
 from Helpers.generator import Generator
 from Pages.add_customer_page import AddCustomerPage
@@ -6,11 +8,11 @@ from Pages.customers_page import CustomersPage
 from Pages.manager_page import ManagerPage
 
 
-@allure.title('Проверить функциональность добавления клиента')
-def test_1(driver) -> None:
+@allure.title('Проверить функциональность добавления клиента.')
+def adding_customer_test_1(driver) -> None:
     manager_page = ManagerPage(driver)
     manager_page.to_add_cust()
-    
+
     # Добавляем пользователя с данными из генератора
     add_customer_page = AddCustomerPage(driver)
     customer = Generator.generate_info()
@@ -32,8 +34,8 @@ def test_1(driver) -> None:
     )
 
 
-@allure.title("Проверить функциональность сортировки имен в списке клиентов")
-def test_2(driver) -> None:
+@allure.title("Проверить функциональность сортировки имен в списке клиентов.")
+def sorting_customers_test_2(driver) -> None:
     manager_page = ManagerPage(driver)
     manager_page.to_cust()
 
@@ -47,8 +49,8 @@ def test_2(driver) -> None:
     )
 
 
-@allure.title("Проверить функциональность удаления клиентов в списке")
-def test_3(driver) -> None:
+@allure.title("Проверить функциональность удаления клиентов в списке.")
+def deleting_customer_test_3(driver) -> None:
     # Переходим в список клиентов
     manager_page = ManagerPage(driver)
     manager_page.to_cust()

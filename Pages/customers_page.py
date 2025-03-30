@@ -1,12 +1,15 @@
-"""Отвечает за страницу списка клиентов"""
+"""Отвечает за страницу списка клиентов."""
+from typing import List
+
 import allure
 from selenium.webdriver.common.by import By
-from typing import List
+
 from Pages.base_page import BasePage
 
 
 class CustomersPage(BasePage):
-    """Класс страницы списка клиентов, наследуется из BasePage"""
+    """Класс страницы списка клиентов."""
+    
     def __init__(self, driver, timeout=10):
         super().__init__(driver, timeout)
 

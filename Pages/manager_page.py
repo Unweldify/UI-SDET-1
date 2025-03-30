@@ -1,11 +1,12 @@
 """Этот файл отвечает за переход по вкладкам/страницам добавления клиента, списков клиентов."""
 import allure
 from selenium.webdriver.common.by import By
+
 from Pages.base_page import BasePage
 
 
 class ManagerPage(BasePage):
-    """Класс страницы перехода по вкладкам, наследуется из BasePage."""
+    """Класс страницы перехода по вкладкам."""
 
     def __init__(self, driver, timeout=10):
         super().__init__(driver, timeout)

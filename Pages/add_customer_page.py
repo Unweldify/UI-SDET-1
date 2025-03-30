@@ -2,11 +2,12 @@
 import allure
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.by import By
+
 from Pages.base_page import BasePage
 
 
 class AddCustomerPage(BasePage):
-    """Класс страницы добавления клиента, наследуется из BasePage."""
+    """Класс страницы добавления клиента."""
 
     def __init__(self, driver):
         super().__init__(driver, timeout=10)
