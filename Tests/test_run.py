@@ -9,7 +9,7 @@ from Pages.manager_page import ManagerPage
 
 
 @allure.title('Проверить функциональность добавления клиента.')
-def adding_customer_test_1(driver) -> None:
+def test_1_adding_customer(driver) -> None:
     manager_page = ManagerPage(driver)
     manager_page.to_add_cust()
 
@@ -35,7 +35,7 @@ def adding_customer_test_1(driver) -> None:
 
 
 @allure.title("Проверить функциональность сортировки имен в списке клиентов.")
-def sorting_customers_test_2(driver) -> None:
+def test_2_sorting_customers(driver) -> None:
     manager_page = ManagerPage(driver)
     manager_page.to_cust()
 
@@ -50,7 +50,7 @@ def sorting_customers_test_2(driver) -> None:
 
 
 @allure.title("Проверить функциональность удаления клиентов в списке.")
-def deleting_customer_test_3(driver) -> None:
+def test_3_deleting_customer(driver) -> None:
     # Переходим в список клиентов
     manager_page = ManagerPage(driver)
     manager_page.to_cust()
