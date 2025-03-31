@@ -3,6 +3,7 @@
 
 Объект тестирования:
 https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
+
 # Требования для запуска проекта
   - Python 3.12.4
   - Allure 2.32.0
