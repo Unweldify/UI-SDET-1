@@ -19,7 +19,7 @@ class AddCustomerPage(BasePage):
         self.__add_button = (By.XPATH, '//button[@type="submit"]')
 
     @allure.step("Добавить клиента.")
-    def add_customer(self, first_name: str, last_name: str, post_code: str) -> None:
+    def add_customer(self, first_name: str, post_code: str, last_name: str) -> None:
         """
         Добавляет клиента с заданными данными из параметров.
 
@@ -32,7 +32,7 @@ class AddCustomerPage(BasePage):
         self.find_element(*self.__post_code).send_keys(post_code)
         self.find_element(*self.__add_button).click()
 
-    @allure.step("Проверить вывод всплывающего окна и закрыть его.")
+    @allure.step("Сохранить вывод всплывающего окна и закрыть его.")
     def handle_alert(self) -> str:
         """
         Считывание текста из всплывающего окна и его закрытие.

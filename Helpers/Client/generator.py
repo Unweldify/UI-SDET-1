@@ -7,7 +7,7 @@ class Generator:
     """Класс для генерации данных."""
 
     @staticmethod
-    def generate_info() -> Tuple[str]:
+    def generate_client_data() -> Tuple[str]:
         """
         Генерирует код из 10 цифр, по коду генерируется имя.
 
@@ -20,6 +20,5 @@ class Generator:
         first_name = ''
         for i in range(0, 10, 2):
             first_name += chr(97 + int(post_code[i:i+2]) % 26)
-        # В задании не сказано сгенерировать фамилию, но
-        # для создания клиента она обязятелна, поэтому ставлю свою
-        return (first_name, "Egorov", post_code)
+
+        return (first_name, post_code)

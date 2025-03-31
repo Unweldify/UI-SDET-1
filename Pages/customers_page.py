@@ -17,14 +17,18 @@ class CustomersPage(BasePage):
         self.__sort_names = (By.XPATH, '//a[normalize-space()="First Name"]')
         self.__delete_buttons = (By.XPATH, '//button[@ng-click="deleteCust(cust)"]')
 
-    @allure.step("Нажать на кнопку имён два раза для сортировки по алфавиту.")
-    def sort_alphabetically(self) -> None:
-        """Кликает на кнопку(ссылку) имен в таблице для сортировки."""
+    @allure.step("Нажать на кнопку имени для сортировки по алфавиту.")
+    def sort_alphabetically(self, a_z_sort: bool) -> None:
+        """
+        Кликает на кнопку(ссылку) имен в таблице для сортировки.
+        
+        :param a_z_sort: Сортировать список по a->z или z->a
+        """
         sort = self.find_element(*self.__sort_names)
-        sort.click()
+        if a_z_sort: sort.click()
         sort.click()
 
-    @allure.step("Получить список имён.")
+    @allure.step("Получаем список имён.")
     def get_names(self) -> List[str]:
         """
         Находит имена по элементам таблицы на странице.
