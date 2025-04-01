@@ -1,6 +1,6 @@
 import pytest
 
-from Helpers.Client.generator import Generator
+from Test_data.Client.generator import Generator
 from Helpers.Client.customers_handler import CustomerHandler
 from Pages.add_customer_page import AddCustomerPage
 from Pages.customers_page import CustomersPage
